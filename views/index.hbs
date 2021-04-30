@@ -1,0 +1,39 @@
+<nav class="navbar navbar-light bg-light mb-5">
+  <a href="/"><span class="navbar-brand mb-0 h1">幹話產生器</span></a>
+
+</nav>
+
+
+<div class="container d-flex flex-column align-items-center">
+  <h1 class="text-center mb-4">你想對誰講幹話</h1>
+  <form action="/" method="POST" class="row">
+    <div class="row col d-form-check justify-content-center mb-4">
+      <img class="col-12 container-fluid mb-4"
+        src="https://sakurazaka46.com/files/14/diary/s46/blog/moblog/202104/mobHOHv3z.jpg" alt="">
+      <label class="col-4 form-check-label" for="engineer"><input class=" form-check-input" type="radio" name="whichOne"
+          id="engineer" value="engineer" {{#if isEnginner}}checked{{/if}}>工程師</label>
+    </div>
+    <div class="row col d-form-check justify-content-center mb-4">
+      <img class="col-12 container-fluid mb-4"
+        src="https://sakurazaka46.com/files/14/diary/s46/blog/moblog/202104/mobtnxYkx.jpg" alt="">
+      <label class="col-4 form-check-label" for="designer"><input class="form-check-input" type="radio" name="whichOne"
+          id="designer" value="designer" {{#if isDesigner}}checked{{/if}}>設計師</label>
+    </div>
+    <div class="row col d-form-check justify-content-center mb-4">
+      <img class="col-12 container-fluid mb-4"
+        src="https://sakurazaka46.com/images/14/1c0/5c58acca46e2f115cd33bfe9afa28.jpg" alt="">
+      <label class="col-4 form-check-label" for="entrepreneur"><input class=" form-check-input" type="radio"
+          name="whichOne" id="entrepreneur" value="entrepreneur" {{#if isEntrepreneur}}checked{{/if}}>創業家</label>
+    </div>
+    <div class="row no-gutters col-12  form-group  justify-content-between">
+      <button type="submit" class="col-1 btn btn-primary" style="height:50px">產生幹話</button>
+      <div class="col-10">
+        <textarea class="col-12 form-control" id="displayArea" rows="3">{{displayArea}}</textarea>
+        {{#if notSelect}}
+        <p class="text-danger">請選擇職業</p>
+        {{/if}}
+      </div>
+
+    </div>
+  </form>
+</div>
